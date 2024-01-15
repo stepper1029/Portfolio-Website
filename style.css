@@ -1,6 +1,6 @@
 :root {
-    --background: #FFFDD0;
-    --text: #555f62;
+    --background: #fff;
+    --text: #000;
     --bold: #7b0211;
   }
 
@@ -33,7 +33,8 @@ nav {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    background-color: var(--text);
+    background-color: #FFFDD0;
+    color: #000;
     border-radius: 50px;
     
 }
