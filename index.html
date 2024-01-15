@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olivia Stepper's Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/220e2e57b9.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo" height="50">
+            <ul id="side-menu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-x" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <!--- <p>Honors Computer Science Student at Northeastern</p> ------>
+            <h1>Hi, I'm<br><span>Olivia Stepper</span></h1>
+        </div>
+
+    </div>
+</div>
+<!-------------------about----------------------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="/images/about.jpeg" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hello, I'm Olivia Stepper, a dedicated Computer Science Student
+                    at Northeastern University on a journey to become a software
+                    engineer. I am eager to expand my skillset and am looking for 
+                    a chance to grow in a professional setting. Currently, I'm seeking internship / co-op 
+                    positions running July through December 2024. Browse my projects, 
+                    skills, and more through my website!
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                </div>
+                <div class="tab-contents active-tab" id="education">
+                    <ul>
+                        <li><span>Northeastern University, Honors Program</span>
+                            <br>Candidate for Bachelors of Science in Computer Science, 3.9 / 4.0 GPA
+                        <br><br>Relevant Coursework: Discrete Math, Mathematics of Data Models, Object-Oriented Design, 
+                        Database Design, Algorithms and Data, Computer Systems, Logic and Computation</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="skills">
+                    <ul>
+                        <li><span>Languages</span>
+                            <br>Java, SQL, Bash, HTML, CSS, JavaScript, C, Python, Racket, MATLAB</li>
+                        <li><span>Operating Systems</span><br>Linux, Mac</li>
+                        <li><span>Software</span><br>Git, Eclipse, IntelliJ, VS Code, MySQL Workbench, XCode</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!------------portfolio------------------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/othello.png">
+                <div class="layer">
+                    <h3>Othello</h3>
+                    <p>A two-player game of capturing stones, with built in hints and custom boards. Made in Java.</p>
+                    <a href="#" ><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/klondike.png">
+                <div class="layer">
+                <h3>Klondike</h3>
+                <p>A solo card-game with three different rule sets available for gameplay. Player makes moves through text-based view and commands. Made in Java.</p>
+                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+            </div>
+            <div class="work">
+                <img src="images/maze.png">
+                <div class="layer">
+                <h3>Search Algorithm Maze</h3>
+                <p>A randomly generated maze of size n which can solve itself using different search paths specified by the user. Made in Java.</p>
+                <a href="https://github.com/stepper1029/Maze"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+            </div>
+            <div class="work">
+                <img src="images/wordle_og_1200x630.png">
+                <div class="layer">
+                <h3>Wordle</h3>
+                <p>A copy of the NYT Wordle game. With an exhaustive 5-letter word dictionary and similar gameplay. Made in Racket.</p>
+                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-------------------------contact------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane" id="contact-icon"></i> olivian.stepper@gmail.com</p>
+                <p><i class="fa-solid fa-phone" id="contact-icon"></i> 849.490.0557</p>   
+                <div class="social-icons">
+                    <a href="https://github.com/stepper1029"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/olivia-nicole-stepper-858b351b3/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="images/Work Resume.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="NAME" placeHolder="Your Name" required>
+                    <input type="email" name="EMAIL" placeHolder="Your Email" required>
+                    <textarea name="MESSAGE" rows="6" placeHolder="Your Message"></textarea>
+                    <button type="submit" id="submit-btn" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var sidemenu = document.getElementById("side-menu");
+
+    function openmenu() {
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu() {
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname) {
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbydor53iiXrxpVCkF-i5NzVP1s8XelnsASTsyo4uIFNw8wvGz5RE8P9mRDLUHDKKrP35A/exec'
+    const form = document.forms['submit-to-google-sheet']
+    var submitBtn = document.getElementById("submit-btn")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+            submitBtn.disabled = true
+            submitBtn.textContent = "Sent"
+            submitBtn.classList.add('sent')
+            setTimeout(function(){
+                submitBtn.textContent = "Submit"
+                submitBtn.disabled = false
+                submitBtn.classList.remove('sent')
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
