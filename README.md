@@ -7,5 +7,5 @@ LinkedIn and a contact form to reach me. This website was made using HTML, Javas
 ## index.html 
 This file contains all of the content for the website.
 
-## css.style
+## style.css
 This file contains the styling and design for the site.
